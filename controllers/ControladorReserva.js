@@ -5,7 +5,7 @@ export class ControladorReserva{
 
     constructor(){}
 
-    insertar(request,response){ //Recibir los datos de pa peticion
+    async insertar(request,response){ //Recibir los datos de pa peticion
         let reserva = new ServicioReserva()
         let datosReserva=request.body//Recibo datos
 
@@ -25,7 +25,7 @@ export class ControladorReserva{
             }
     }
 
-    buscarPorId(request,response){
+    async buscarPorId(request,response){
         let reserva = new ServicioReserva()
         let id=request.params.id//Id que llega por la URL
 
@@ -44,7 +44,7 @@ export class ControladorReserva{
             }
     }
 
-    editar(request,response){
+    async editar(request,response){
         let reserva = new ServicioReserva()
         let id=request.params.id //id que llega por la URL
         let datosReserva=request.body //RECIBE DEL BODY
@@ -64,7 +64,7 @@ export class ControladorReserva{
             }     
     }
 
-    eliminar(request,response){
+    async eliminar(request,response){
         let reserva = new ServicioReserva()
         let id=request.params.id //id que llega por la URL
         try{
